@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Michael Lucki
+ */
+package gui;
+
+import java.util.LinkedList;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import containers.*;
+import commands.*;
+
+public class NoticeViewPanel extends JPanel implements ActionListener{
+        protected JPanel listPanel;
+        protected JPanel messagePanel;
+        
+        public ViewNoticesPanel(int userID) {
+        NotificationsList viewList = new NotificationsList();
+
+        LinkedList<Notification> nl = viewList.recieveMessages(userID);
+        
+        
+        JRadioButton listView = new JRadioButton("List View");
+        listView.addActionListener(this);    
+        listView.setSelected(true);
+        JRadioButton calendarView = new JRadioButton("Calendar View");
+        calendarView.addActionListener(this);
+        ButtonGroup viewType = new ButtonGroup();
+            viewType.add(listView);
+            viewType.add(calendarView);
+        add(listView);
+        add(calendarView);
+        
+        
+
+        
+    }
+}

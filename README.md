@@ -1,5 +1,5 @@
-# CMPT370_course_project
-the cmpt370 course project (Apartment Management System)
+# Apartment Management System
+Apartment Management System is a cmpt370 course project
 
 ### Keys of this project
 * Understood basic software engineering principle
